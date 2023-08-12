@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  @font-face {
+  font-family: eveleth;
+  src: url(eveleth-cufonfonts/Eveleth\ Regular.otf);
+  font-family: handjet-light;
+  src: url(Handjet-Light.ttf);
+  font-family: lobster;
+  src: url(Lobster-Regular.ttf);
+  font-family: BebasNeue-Regular;
+  src: url(BebasNeue-Regular.ttf);
+}
+    body{
+        background-color: #2d2e2d;
+    }
+    .responsive-navbar {
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  position: relative;
+  }
+
+ .responsive-navbar .res-menu {
+  display: inline-block;
+  }
+  .navvalue img{
+    width: 20%;
+  }
+
+ .responsive-navbar > .res-menu > .navvalue {
+  display: inline-block;
+  font-size: 22px;
+  color: white;
+  padding: 15px;
+
+  }
+
+.resnavbar-links{
+  margin-top: 30px;
+  margin-right: 30px;
+}
+
+ .responsive-navbar > .res-navbtn {
+  display: none;
+  }
+
+ .responsive-navbar > .resnavbar-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+  }
+
+ .responsive-navbar > .resnavbar-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 25px;
+  text-decoration: none;
+  color:White;
+  font-size:22px
+  }
+
+ .responsive-navbar > .resnavbar-links > a:hover {
+  color:rgb(145, 104, 1);
+  }
+
+ .responsive-navbar > #resnavbar-type {
+  display: none;
+  }
+  .content{
+    
+    left: 20%;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-top: 151px;
+  }
+ @media all and (max-width:900px) {
+  .content{
+    font-family:eveleth;
+    left: 20%;
+    color: rgb(255, 255, 255);
+    font-size: 8vw;
+    margin-top: 151px;
+  }
+  .responsive-navbar > .res-navbtn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+ .responsive-navbar > .res-navbtn > label {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  padding: 12px;
+  }
+
+ .responsive-navbar > .res-navbtn > label:hover,.nav  #resnavbar-type:checked ~ .res-navbtn > label {
+  background-color: rgba(0, 0, 0, 0.267);
+  color: #fff;
+  }
+
+ .responsive-navbar > .res-navbtn > label > span {
+  display: block;
+  width: 25px;
+  /* position: absolute; */
+  height: 10px;
+  top: 9px;
+  border: white;
+  margin: 0 -21px;
+  color: white;
+  border-top: 2px solid white;
+  }
+
+ .responsive-navbar > .resnavbar-links {
+  position: absolute;
+  display: block;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.267);
+  height: 0px;
+  overflow-y: hidden;
+  top: 50px;
+  left: 0px;
+  }
+
+ .responsive-navbar > .resnavbar-links > a {
+  display: block;
+  width: 100%;
+  }
+
+ .responsive-navbar > #resnavbar-type:not(:checked) ~ .resnavbar-links {
+  height: 0px;
+  }
+
+ .responsive-navbar > #resnavbar-type:checked ~ .resnavbar-links {
+  height: 100vh;
+  overflow-y: auto;
+  outline:2px solid rgb(145, 104, 1);
+  }
+  }
+  
+    .match-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  color: white;
+}
+
+.team-logo {
+  flex: 1;
+  text-align: center;
+}
+
+.team-logo img {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.match-details {
+  flex: 2;
+  text-align: center;
+}
+
+.match-date {
+  font-weight: bold;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 600px) {
+  .match-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .team-logo,
+  .match-details {
+    flex: none;
+    width: 100%;
+  }
+}
+H1{
+    text-align: center;
+    color: white;
+     
+}
+
+</style>
+<body>
+  <div class="responsive-navbar">
+    <input type="checkbox" id="resnavbar-type">
+    <div class="res-menu">
+      <div class="navvalue">
+       <a href="index.html"> <img src="paris logo.png" alt=""></a>
+      </div>
+    </div>
+    <div class="res-navbtn">
+      <label for="resnavbar-type">
+      <span></span>
+      <span></span>
+      <span></span>
+      </label>
+    </div>
+    <div class="resnavbar-links">
+      <a href="team.html">Our Team</a>
+      <a href="upcoming.html">Up Coming Match's</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html"><i class="fa-solid fa-circle-user"></i>Login</a>
+    </div>
+  </div>
+    <h1>UPCOMING MATCHES</h1>
+    <div class="match-card">
+        <div class="team-logo">
+          <img src="paris logo.png" alt="Team Logo 1">
+        </div>
+        <div class="match-details">
+          <p class="match-date">Fri,Aug 11</p>
+          <p class="match-teams"> PARIS SAINT-GERMAIN VS  JEONBUK HYUNDAI </p>
+          <h5>START AT 7:PM</h5>
+        </div>
+        <div class="team-logo">
+          <img src="jeonbuk24.png" alt="Team Logo 2">
+        </div>
+      </div>
+      <div class="match-card">
+        <div class="team-logo">
+          <img src="paris logo.png" alt="Team Logo 1">
+        </div>
+        <div class="match-details">
+          <p class="match-date">Sat,Aug 12</p>
+          <p class="match-teams">PARIS SAINT-GERMAIN VS FC LORIENT </p>
+          <h5>START AT 9:AM</h5>
+        </div>
+        <div class="team-logo">
+          <img src="fclorient.png" alt="Team Logo 2">
+        </div>
+      </div>
+      <div class="match-card">
+        <div class="team-logo">
+          <img src="paris logo.png" alt="Team Logo 1">
+        </div>
+        <div class="match-details">
+          <p class="match-date">Mon,Aug 14</p>
+          <p class="match-teams">PARIS SAINT-GERMAIN VS FRONTIGNAN </p>
+          <h5>START AT 9:PM</h5>
+        </div>
+        <div class="team-logo">
+          <img src="frontignan__logo__2023-2024.png" alt="Team Logo 2">
+        </div>
+      </div>
+      <div class="match-card">
+        <div class="team-logo">
+          <img src="paris logo.png" alt="Team Logo 1">
+        </div>
+        <div class="match-details">
+          <p class="match-date">Tue,Aug 15</p>
+          <p class="match-teams">PARIS SAINT-GERMAIN VS ZAGREB </p>
+          <h5>START AT 11:AM</h5>
+        </div>
+        <div class="team-logo">
+          <img src="hc-zagreb__logo__2017-2018.png" alt="Team Logo 2">
+        </div>
+      </div>
+      <div class="match-card">
+        <div class="team-logo">
+          <img src="paris logo.png" alt="Team Logo 1">
+        </div>
+        <div class="match-details">
+          <p class="match-date">Wed,Aug 16</p>
+          <p class="match-teams">PARIS SAINT-GERMAIN VS NANTES </p>
+          <h5>START AT 10:00 PM</h5>
+        </div>
+        <div class="team-logo">
+          <img src="nantes__logo__2023-2024.png" alt="Team Logo 2">
+        </div>
+      </div>
+      
+</body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+<style>
+  body{
+    background-color: #2d2e2d;
+  }
+  @font-face {
+  font-family: eveleth;
+  src: url(eveleth-cufonfonts/Eveleth\ Regular.otf);
+  font-family: handjet-light;
+  src: url(Handjet-Light.ttf);
+  font-family: lobster;
+  src: url(Lobster-Regular.ttf);
+  font-family: BebasNeue-Regular;
+  src: url(BebasNeue-Regular.ttf);
+}
+.responsive-navbar {
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  position: relative;
+  }
+
+ .responsive-navbar .res-menu {
+  display: inline-block;
+  }
+  .navvalue img{
+    width: 20%;
+  }
+
+ .responsive-navbar > .res-menu > .navvalue {
+  display: inline-block;
+  font-size: 22px;
+  color: white;
+  padding: 15px;
+
+  }
+
+.resnavbar-links{
+  margin-top: 30px;
+  margin-right: 30px;
+}
+
+ .responsive-navbar > .res-navbtn {
+  display: none;
+  }
+
+ .responsive-navbar > .resnavbar-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+  }
+
+ .responsive-navbar > .resnavbar-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 25px;
+  text-decoration: none;
+  color:White;
+  font-size:22px
+  }
+
+ .responsive-navbar > .resnavbar-links > a:hover {
+  color:rgb(145, 104, 1);
+  }
+
+ .responsive-navbar > #resnavbar-type {
+  display: none;
+  }
+  .content{
+    
+    left: 20%;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-top: 151px;
+  }
+ @media all and (max-width:900px) {
+  .content{
+    font-family:eveleth;
+    left: 20%;
+    color: rgb(255, 255, 255);
+    font-size: 8vw;
+    margin-top: 151px;
+  }
+  .responsive-navbar > .res-navbtn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+ .responsive-navbar > .res-navbtn > label {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  padding: 12px;
+  }
+
+ .responsive-navbar > .res-navbtn > label:hover,.nav  #resnavbar-type:checked ~ .res-navbtn > label {
+  background-color: rgba(0, 0, 0, 0.267);
+  color: #fff;
+  }
+
+ .responsive-navbar > .res-navbtn > label > span {
+  display: block;
+  width: 25px;
+  /* position: absolute; */
+  height: 10px;
+  top: 9px;
+  border: white;
+  margin: 0 -21px;
+  color: white;
+  border-top: 2px solid white;
+  }
+
+ .responsive-navbar > .resnavbar-links {
+  position: absolute;
+  display: block;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.267);
+  height: 0px;
+  overflow-y: hidden;
+  top: 50px;
+  left: 0px;
+  }
+
+ .responsive-navbar > .resnavbar-links > a {
+  display: block;
+  width: 100%;
+  }
+
+ .responsive-navbar > #resnavbar-type:not(:checked) ~ .resnavbar-links {
+  height: 0px;
+  }
+
+ .responsive-navbar > #resnavbar-type:checked ~ .resnavbar-links {
+  height: 100vh;
+  overflow-y: auto;
+  outline:2px solid rgb(145, 104, 1);
+  }
+  }
+
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.login-box .user-box label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: rgb(145, 104, 1);
+  font-size: 12px;
+}
+
+.login-box form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: rgb(145, 104, 1);
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+}
+
+.login-box a:hover {
+  background: rgb(145, 104, 1);
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgb(145, 104, 1),
+              0 0 25px rgb(145, 104, 1),
+              0 0 50px rgb(145, 104, 1),
+              0 0 100px rgb(145, 104, 1);
+}
+
+.login-box a span {
+  position: absolute;
+  display: block;
+}
+
+.login-box a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #eefcfd);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.login-box a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, rgb(145, 104, 1));
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.login-box a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, rgb(145, 104, 1));
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.login-box a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, rgb(145, 104, 1));
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
+
+</style>
+</head>
+<body>
+  <div class="responsive-navbar">
+    <input type="checkbox" id="resnavbar-type">
+    <div class="res-menu">
+      <div class="navvalue">
+        <a href="index.html"><img src="paris logo.png" alt=""></a>
+      </div>
+    </div>
+    <div class="res-navbtn">
+      <label for="resnavbar-type">
+      <span></span>
+      <span></span>
+      <span></span>
+      </label>
+    </div>
+    <div class="resnavbar-links">
+      <a href="team.html">Our Team</a>
+      <a href="upcoming.html">Up Coming Match's</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html"><i class="fa-solid fa-circle-user"></i>Login</a>
+    </div>
+  </div>
+    <div class="login-box">
+        <h2>Login</h2>
+        <form>
+          <div class="user-box">
+            <input type="text" name="" required="" id="name">
+            <label>Username</label>
+          </div>
+          <div class="user-box">
+            <input type="password" name="" required="" id="password">
+            <label>Password</label>
+          </div>
+          <a href="#" onclick="validate()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+          </a>
+        </form>
+      </div>
+
+      <script>
+        // var name= document.getElementById('name')
+        // var name= document.getElementById('password')
+
+        function validate() {
+					var username = document.getElementById('name').value;
+					var password = document.getElementById('password').value;
+
+					if (username == 'admin' && password == 'admin') {
+						alert('login successful!');
+						window.location = '/'; 
+						return false;
+					}
+                    else{
+                        alert('Field is blank')
+                    }
+				}
+      </script>
+</body>
+</html>

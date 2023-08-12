@@ -1,0 +1,439 @@
+@font-face {
+  font-family: eveleth;
+  src: url(eveleth-cufonfonts/Eveleth\ Regular.otf);
+  font-family: handjet-light;
+  src: url(Handjet-Light.ttf);
+  font-family: lobster;
+  src: url(Lobster-Regular.ttf);
+  font-family: BebasNeue-Regular;
+  src: url(BebasNeue-Regular.ttf);
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #2D2E2D;
+}
+/* navbar */
+	
+.responsive-navbar {
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  position: relative;
+  }
+
+ .responsive-navbar .res-menu {
+  display: inline-block;
+  }
+  .navvalue img{
+    width: 20%;
+  }
+
+ .responsive-navbar > .res-menu > .navvalue {
+  display: inline-block;
+  font-size: 22px;
+  color: white;
+  padding: 15px;
+
+  }
+
+.resnavbar-links{
+  margin-top: 30px;
+  margin-right: 30px;
+}
+
+ .responsive-navbar > .res-navbtn {
+  display: none;
+  }
+
+ .responsive-navbar > .resnavbar-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+  }
+
+ .responsive-navbar > .resnavbar-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 25px;
+  text-decoration: none;
+  color:White;
+  font-size:22px
+  }
+
+ .responsive-navbar > .resnavbar-links > a:hover {
+  color:rgb(145, 104, 1);
+  }
+
+ .responsive-navbar > #resnavbar-type {
+  display: none;
+  }
+  .content{
+    
+    left: 20%;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-top: 151px;
+  }
+ @media all and (max-width:900px) {
+  .content{
+    font-family:eveleth;
+    left: 20%;
+    color: rgb(255, 255, 255);
+    font-size: 8vw;
+    margin-top: 151px;
+  }
+  .responsive-navbar > .res-navbtn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+ .responsive-navbar > .res-navbtn > label {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  padding: 12px;
+  }
+
+ .responsive-navbar > .res-navbtn > label:hover,.nav  #resnavbar-type:checked ~ .res-navbtn > label {
+  background-color: rgba(0, 0, 0, 0.267);
+  color: #fff;
+  }
+
+ .responsive-navbar > .res-navbtn > label > span {
+  display: block;
+  width: 25px;
+  /* position: absolute; */
+  height: 10px;
+  top: 9px;
+  border: white;
+  margin: 0 -21px;
+  color: white;
+  border-top: 2px solid white;
+  }
+
+ .responsive-navbar > .resnavbar-links {
+  position: absolute;
+  display: block;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.267);
+  height: 0px;
+  overflow-y: hidden;
+  top: 50px;
+  left: 0px;
+  }
+
+ .responsive-navbar > .resnavbar-links > a {
+  display: block;
+  width: 100%;
+  }
+
+ .responsive-navbar > #resnavbar-type:not(:checked) ~ .resnavbar-links {
+  height: 0px;
+  }
+
+ .responsive-navbar > #resnavbar-type:checked ~ .resnavbar-links {
+  height: 100vh;
+  overflow-y: auto;
+  outline:2px solid rgb(145, 104, 1);
+  }
+  }
+/* body */
+.responsive-div {
+  width: 100%;
+  height: 100vh;
+  background-image: url(heros-img.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.content {
+  height: max-content;
+  width: max-content;
+  margin-left: 150px;
+  margin-bottom: 200px;
+}
+.content h1{
+  font-family:eveleth;
+  left: 20%;
+  color: rgb(255, 255, 255);
+  font-size: 72px;
+}
+.content p{
+  left: 20%;
+  color: rgb(145, 104, 1);
+  width:100%;
+  font-family:lobster;
+  font-size: 33px;
+}
+/* main-trasition */
+#cont{
+  font-family: handjet-light;
+  font-size:x-large;
+  font-weight: 800;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  background-color: #2d2e2d;
+  color: white;
+
+}
+#maintrasition-file{
+  width: 100%;
+  height: 400px;
+  margin-top: -400px;
+
+}
+#abc{
+  
+  height: 700px;
+  width: 65%;
+  background-image: url(background.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+
+}
+
+/* cards */
+.all-cards{
+  /* display: flex;
+  flex-wrap: wrap; */
+  background-color: #2D2E2D;
+  align-items: center;
+  justify-content: center;
+}
+#card-heading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background-color: #2D2E2D;
+  font-size: 4vw;
+  font-family: BebasNeue-Regular;
+  margin-top: 100px;
+}
+
+.card {
+  width: calc(33.33% - 20px); /* 1/3 width minus margin */
+  margin: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: none;
+}
+
+.card img {
+  max-width: 170%;
+  height: 350px;
+  display: block;
+}
+
+.card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #2D2E2D;
+}
+
+.card-title {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.card-para {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #ffffff;
+}
+/* card button */
+@import url("https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap");
+body,
+html {
+  height: 100%;
+  min-height: 100%;
+}
+
+.wrapper {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+.btn,
+.btn:focus,
+.btn:active {
+  position: relative;
+  display: inline-block;
+  font-family: "Ropa Sans", sans-serif;
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: hsla(0, 0%, 100%, 1);
+  padding: 0 18px;
+  border-radius: 0;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+.btn:before,
+.btn:after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 30px;
+  height: 30px;
+  transform: rotate(45deg);
+  z-index: 3;
+}
+.btn:hover:before,
+.btn:hover:after {
+  background-color: hsla(0, 0%, 100%, 1);
+}
+.btn:before {
+  bottom: 4px;
+  right: 4px;
+  border-right: 3px solid hsla(0, 0%, 100%, 1);
+}
+.btn:after {
+  top: 4px;
+  left: 4px;
+  border-left: 3px solid hsla(0, 0%, 100%, 1);
+}
+.btn .btn-text,
+.btn:focus .btn-text,
+.btn:active .btn-text {
+  color: hsla(0, 0%, 100%, 1);
+}
+.btn .btn-text,
+.btn:hover .btn-text {
+  position: relative;
+  display: block;
+  line-height: 1;
+  padding: 1.25rem 1.5rem;
+  border-top: 3px solid hsla(0, 0%, 100%, 1);
+  border-bottom: 3px solid hsla(0, 0%, 100%, 1);
+  z-index: 3;
+}
+.btn:hover .btn-text {
+  color: rgb(145, 104, 1);
+  background-color: hsla(0, 0%, 100%, 1);
+}
+.btn .btn-text:before,
+.btn .btn-text:after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: calc(100% - 13px);
+  z-index: 3;
+}
+.btn:hover .btn-text:before,
+.btn:hover .btn-text:after {
+  background-color: hsla(0, 0%, 100%, 1);
+}
+.btn .btn-text:before {
+  left: -18px;
+  bottom: -3px;
+  border-bottom: 3px solid hsla(0, 0%, 100%, 1);
+  border-left: 3px solid hsla(0, 0%, 100%, 1);
+}
+.btn .btn-text:after {
+  top: -3px;
+  right: -18px;
+  border-top: 3px solid hsla(0, 0%, 100%, 1);
+  border-right: 3px solid hsla(0, 0%, 100%, 1);
+}
+
+/* slider */
+.ss-background{
+  background-image: url(Tibor-pic.jpg);
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60vh;
+}
+.slick-slider{
+  height: 70%;
+  width: 70%;
+}
+.slick-slider p{
+  font-size: 2rem;
+  color: aliceblue;
+}
+/* icons */
+.social-side-icons {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.social-side-icon {
+  margin-bottom: 10px;
+}
+
+.social-side-icon a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 40px;
+  color: #fffefe; /* Set icon color to black */
+  font-size: 20px;
+  transition: background-color 0.3s, transform 0.3s;
+  background-color: transparent; /* Add white background for icons */
+  border-radius: 50%; /* Make icons circular */
+}
+
+.social-side-icon a:hover {
+  background-color: #000; /* Change background color on hover */
+  color: #fff; /* Change icon color on hover */
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .social-side-icons {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    background-color: transparent;
+    padding: 0;
+  }
+  .content p {
+    left: 20%;
+    color: rgb(145, 104, 1);
+    width: auto;
+    font-family: lobster;
+    font-size: 12px;
+}
+  .content h1 {
+    font-family: eveleth;
+    left: 20%;
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    /* position: relative; */
+}
+
+  .social-side-icon {
+    margin: 0 10px;
+  }
+}

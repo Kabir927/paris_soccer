@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="WOW-master/css/libs/animate.css">
+
+</head>
+<style>
+  @font-face {
+  font-family: eveleth;
+  src: url(eveleth-cufonfonts/Eveleth\ Regular.otf);
+  font-family: handjet-light;
+  src: url(Handjet-Light.ttf);
+  font-family: lobster;
+  src: url(Lobster-Regular.ttf);
+  font-family: BebasNeue-Regular;
+  src: url(BebasNeue-Regular.ttf);
+}
+    body{
+        background-color: rgb(68, 66, 66);
+    }
+    .responsive-navbar {
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  position: relative;
+  }
+
+ .responsive-navbar .res-menu {
+  display: inline-block;
+  }
+  .navvalue img{
+    width: 20%;
+  }
+
+ .responsive-navbar > .res-menu > .navvalue {
+  display: inline-block;
+  font-size: 22px;
+  color: white;
+  padding: 15px;
+
+  }
+
+.resnavbar-links{
+  margin-top: 30px;
+  margin-right: 30px;
+}
+
+ .responsive-navbar > .res-navbtn {
+  display: none;
+  }
+
+ .responsive-navbar > .resnavbar-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+  }
+
+ .responsive-navbar > .resnavbar-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 25px;
+  text-decoration: none;
+  color:White;
+  font-size:22px
+  }
+
+ .responsive-navbar > .resnavbar-links > a:hover {
+  color:rgb(145, 104, 1);
+  }
+
+ .responsive-navbar > #resnavbar-type {
+  display: none;
+  }
+  .content{
+    
+    left: 20%;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-top: 151px;
+  }
+ @media all and (max-width:900px) {
+  .content{
+    font-family:eveleth;
+    left: 20%;
+    color: rgb(255, 255, 255);
+    font-size: 8vw;
+    margin-top: 151px;
+  }
+  .responsive-navbar > .res-navbtn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+ .responsive-navbar > .res-navbtn > label {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  padding: 12px;
+  }
+
+ .responsive-navbar > .res-navbtn > label:hover,.nav  #resnavbar-type:checked ~ .res-navbtn > label {
+  background-color: rgba(0, 0, 0, 0.267);
+  color: #fff;
+  }
+
+ .responsive-navbar > .res-navbtn > label > span {
+  display: block;
+  width: 25px;
+  /* position: absolute; */
+  height: 10px;
+  top: 9px;
+  border: white;
+  margin: 0 -21px;
+  color: white;
+  border-top: 2px solid white;
+  }
+
+ .responsive-navbar > .resnavbar-links {
+  position: absolute;
+  display: block;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.267);
+  height: 0px;
+  overflow-y: hidden;
+  top: 50px;
+  left: 0px;
+  }
+
+ .responsive-navbar > .resnavbar-links > a {
+  display: block;
+  width: 100%;
+  }
+
+ .responsive-navbar > #resnavbar-type:not(:checked) ~ .resnavbar-links {
+  height: 0px;
+  }
+
+ .responsive-navbar > #resnavbar-type:checked ~ .resnavbar-links {
+  height: 100vh;
+  overflow-y: auto;
+  outline:2px solid rgb(145, 104, 1);
+  }
+  }
+    .container-fluid{
+        /* height: 1000px; */
+        width: 100%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        /* border: 1px solid; */
+        /* display: flex;
+        align-items: center;
+        justify-content: center; */
+
+        
+    }
+    .card{
+        border: none;
+        /* border-radius: 20px; */
+    }
+    .col{
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        animation-duration: 1s;
+        
+
+    }
+    .col-md-6{
+        background-color: rgb(68, 31, 31);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        opacity: .9;
+        /* font-weight: bold; */
+        /* width: 50%; */
+
+    }
+    .col-md-6:hover{
+      opacity: 1;
+      transition: .5s;
+    }
+    .col-md-6 h5{
+        font-weight: bold;
+        font-size: 2rem;
+    }
+    .header{
+        width: 100%;
+        color: white;
+        /* margin: 30px; */
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+    .header h1{
+        font-weight: 900;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .header hr{
+        color: antiquewhite
+    }
+    hr{
+        color: antiquewhite
+    }
+    .para{
+        width: 100%;
+        color: white;
+        /* margin: 30px; */
+        /* margin-top: 40px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .para p{
+        width: 80%;
+    }
+</style>
+<body>
+  <div class="responsive-navbar">
+    <input type="checkbox" id="resnavbar-type">
+    <div class="res-menu">
+      <div class="navvalue">
+        <a href="index.html"><img src="paris logo.png" alt=""></a>
+      </div>
+    </div>
+    <div class="res-navbtn">
+      <label for="resnavbar-type">
+      <span></span>
+      <span></span>
+      <span></span>
+      </label>
+    </div>
+    <div class="resnavbar-links">
+      <a href="team.html">Our Team</a>
+      <a href="upcoming.html">Up Coming Match's</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html"><i class="fa-solid fa-circle-user"></i>Login</a>
+    </div>
+  </div>
+    <div class="header">
+        <h1>OUR TEAM</h1>
+        <hr>
+      </div> 
+      <!-- <hr> -->
+      <div class="para">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur nesciunt voluptatibus <br>nihil fugit ex perferendis fuga eius facilis et debitis, vitae, sequi omnis <br> similique facere delectus excepturi amet vero odit!</p>
+      </div>
+
+    <div class="container-fluid">
+        <div class="col">
+            <div class="card mb-3" style="max-width: 740px;">
+                <div class="row g-0">
+                  <div class="col-md-6" >
+                    <img src="mbape.jpeg" class="img-fluid rounded-start" alt="..." style="height: 300px; width: 600px;">
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <h5 class="card-title">KEYLIAN MBAPPE</h5>
+                      <p class="card-text">In recent years, the Frenchman has predominantly operated as a centre-forward for PSG, while featuring on the left-wing for his country. In fact, under Mauricio Pochettino at Les Parc des Princes, he enjoyed his best return in front of goal as a striker.</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container-fluid">
+        <div class="col wow bounceInUp center">
+            <div class="card mb-3" style="max-width: 740px;">
+                <div class="row g-0">
+                  <div class="col-md-6">
+                    <img src="marqhinos.jpeg" class="img-fluid rounded-start" alt="..." style="height: 300px; width: 600px;">
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <h5 class="card-title">MARQHINOUS</h5>
+                      <p class="card-text">Mainly a centre-back, he can also play as a right-back or a defensive midfielder. Marquinhos is widely regarded as one of the best defenders in the world.</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container-fluid">
+        <div class="col wow bounceInUp center">
+            <div class="card mb-3" style="max-width: 740px;">
+                <div class="row g-0">
+                  <div class="col-md-6" style="border: none;">
+                    <img src="hakimi.jpeg" class="img-fluid rounded-start" alt="..." style="height: 300px; width: 600px;">
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <h5 class="card-title">ASHRAF HAKIMI</h5>
+                      <p class="card-text">Hakimi scored five goals on 22 shots and tallied eight clean sheets, five assists, 36 chances created, 53 crosses and 63 tackles in 36 appearances (30 starts) across all competitions for PSG in season 2022/23.</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container-fluid">
+        <div class="col wow bounceInUp center">
+            <div class="card mb-3" style="max-width: 740px;">
+                <div class="row g-0">
+                  <div class="col-md-6">
+                    <img src="nemar.jpeg" class="img-fluid rounded-start" alt="..." style="height: 300px; width: 600px;">
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <h5 class="card-title">NEYMAR JR</h5>
+                      <p class="card-text">Neymar da Silva Santos Júnior (born 5 February 1992), known as Neymar Júnior or mononymously as Neymar, is a Brazilian professional footballer who plays as a forward for Ligue 1 club Paris Saint-Germain and the Brazil national team</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container-fluid">
+        <div class="col wow bounceInUp center" >
+            <div class="card mb-3" style="max-width: 740px;">
+                <div class="row g-0">
+                  <div class="col-md-6">
+                    <img src="ronaldo.jpg" class="img-fluid rounded-start" alt="..." style="height: 300px; width: 600px;">
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <h5 class="card-title">CRISTIANO RONALDO</h5>
+                      <p class="card-text">Cristiano Ronaldo dos Santos Aveiro GOIH ComM (Portuguese pronunciation: [kɾiʃˈtjɐnu ʁɔˈnaldu]; born 5 February 1985) is a Portuguese professional footballer who plays as a forward for and captains both Saudi Pro League club Al Nassr and the Portugal national team.</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container-fluid">
+        <div class="col wow bounceInUp center">
+            <div class="card mb-3" style="max-width: 740px;">
+                <div class="row g-0">
+                  <div class="col-md-6">
+                    <img src="messi.jpg" class="img-fluid rounded-start" alt="..." style="height: 300px; width: 600px;">
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <h5 class="card-title">LEO. MESSI</h5>
+                      <p class="card-text">Lionel Messi and Erling Haaland are the Ballon d'Or 2023 favourites. Lionel Messi and Erling Haaland are the leading contenders for the 2022-23 season. While record-time winner Messi is still a contender, his long-time Ballon d'Or rival Cristiano Ronaldo is already out of the picture.15-Jun-2023
+                      </p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <hr>
+
+       <script src="WOW-master/dist/wow.min.js"></script>
+              <script>
+              new WOW().init();
+              </script>
+</body>
+</html>
